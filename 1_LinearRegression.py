@@ -2,6 +2,7 @@ import pandas as pd
 import quandl, math, datetime
 import numpy as np
 import matplotlib.pyplot as plt
+import pickle
 from matplotlib import style
 from sklearn import preprocessing, model_selection, svm
 from sklearn.linear_model import LinearRegression
@@ -54,7 +55,7 @@ print(dt.tail(20))
 
 
 """
-    DEFINE OUR X-features & Y-labels to show graphically
+    DEFINE X-features & Y-labels to prepare data for classifier
 """
 X = np.array(dt.drop(['label'],1))
 X = preprocessing.scale(X)
