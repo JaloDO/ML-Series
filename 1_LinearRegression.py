@@ -51,7 +51,7 @@ forecast_out = (10)
 dt['label'] = dt[forecast_col].shift(-forecast_out)
 ##adding following line, obtain better model
 dt = dt.tail(200)
-print(dt.tail(20))
+print(dt.tail(100))
 
 
 """
@@ -79,8 +79,8 @@ forecast_set = clf.predict(X_lately)
 print('Accuracy Ratio: ',accuracy)
 print('Forecast Set: ',forecast_set)
 print('Forecast Out: ',forecast_out)
-##pd.plotting.scatter_matrix(dt, alpha=0.4, figsize=(8, 8))
-##plt.show()
+pd.plotting.scatter_matrix(dt, alpha=0.4, figsize=(8, 8))
+plt.show()
 
 
 """
