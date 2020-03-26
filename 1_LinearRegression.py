@@ -50,7 +50,7 @@ forecast_out = (10)
 #a partir de 34 dias en el futuro
 dt['label'] = dt[forecast_col].shift(-forecast_out)
 ##adding following line, obtain better model
-dt = dt.tail(200)
+dt = dt.tail(110)
 print(dt.tail(100))
 
 
